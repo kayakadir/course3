@@ -24,7 +24,6 @@ let notes = [
   },
 ];
 app.get("/", (request, response) => {
-  console.log(request.headers);
   response.send("<h1>Hello World!</h1>");
 });
 
@@ -53,6 +52,11 @@ const generateId = () => {
   let maxId = notes.length > 0 ? Math.max(...notes.map((n) => n.id)) : 0;
   return maxId + 1
 }
+
+app.get('/new', (req, res) => {
+  console.log("Hello world")
+  res.end()
+})
 
 app.post("/api/notes", (request, response) => {
   // add new post
