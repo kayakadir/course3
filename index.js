@@ -57,6 +57,11 @@ app.get('/new', (req, res) => {
   console.log("Hello world")
   res.end()
 })
+app.get('/new2', (req, res) => {
+  console.log("Hello world")
+  res.end()
+})
+
 
 app.post("/api/notes", (request, response) => {
   // add new post
